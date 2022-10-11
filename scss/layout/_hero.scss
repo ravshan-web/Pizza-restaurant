@@ -1,0 +1,46 @@
+#hero {
+  width: 100%;
+  height: 328px;
+  position: relative;
+}
+
+.wrapper {
+  width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 100px;
+}
+
+.front-card {
+  width: 349px;
+  height: 328px;
+  padding: 30px 20px;
+  background-color: #fff;
+  @include flexStyle(start, center, column);
+  box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+
+  .card-icon {
+    width: 126px;
+    height: 104px;
+    @include flexStyle(center, center, row);
+  }
+
+  .card-desc {
+    @include flexStyle(space-between, center, column);
+
+    .title {
+      @include PrimaryFont(26px, 400, 30px);
+      span {
+        color: #bc9060;
+      }
+    }
+
+    p {
+      @include PrimaryFont(26px, 400, 30px);
+      text-align: center;
+      color: #656363;
+      margin-top: 20px;
+    }
+  }
+}

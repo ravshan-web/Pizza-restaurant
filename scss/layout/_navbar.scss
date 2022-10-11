@@ -1,0 +1,177 @@
+.nav {
+  width: 100%;
+  height: 64px;
+  @include flexStyle(space-between, center, row);
+}
+// NAVBAR MENU 4 ITEMS LINKS start
+.navbar {
+  @include flexStyle(space-between, center, row);
+  max-width: 892px;
+  //   background-color: #9c6e48;
+
+  &__ul {
+    @include flexStyle(space-between, center, row);
+    width: 35%;
+
+    &--li {
+      list-style-type: none;
+      display: inline-block;
+      position: relative;
+      color: #ff7400;
+
+      a {
+        text-decoration: none;
+        @include SecondaryFont(14px, 700, 19px);
+        color: white;
+        animation: Underline;
+      }
+    }
+
+    li:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ff7400;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-in-out;
+    }
+
+    li:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+// NAVBAR MENU 4 ITEMS LINKS end
+
+// NAVBAR ORDER PLACE start
+.order__wrapper {
+  max-width: 30%;
+  @include flexStyle(space-between, center, row);
+
+  .cart-wrapper {
+    @include flexStyle(space-between, center, row);
+
+    .cart-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .vertical-line {
+    width: 1px;
+    height: 52px;
+    background-color: #fff;
+    margin: 0 21px;
+  }
+
+  .contact {
+    @include flexStyle(space-between, center, column);
+
+    &__phone {
+      width: 160px;
+      @include SecondaryFont(18px, 700, 25px);
+      @include flexStyle(space-between, center, row);
+      color: white;
+      text-decoration: none;
+    }
+
+    &__phone::before {
+      content: url(../../images/icon/phone.svg);
+    }
+
+    &__text {
+      @include SecondaryFont(14px, 400, 19px);
+      color: #fff;
+    }
+  }
+}
+
+// NAVBAR ORDER PLACE end
+
+// Order button start
+
+.order-button-wrapper {
+  margin-left: 45px;
+  a {
+    padding: 14px 19px;
+    background-color: #ff7400;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    @include SecondaryFont(14px, 700, 19px);
+  }
+}
+
+// Order button end
+
+//into title start
+
+.intro-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 200px;
+  max-width: 50%;
+  height: 250px;
+  // background-color: #35d63a;
+  @include flexStyle(space-evenly, center, column);
+
+  p {
+    @include PrimaryFont(50px, 400, 50px);
+    color: #d67e35;
+  }
+
+  h1 {
+    @include PrimaryFont(80px, 400, 92px);
+    color: #d67e35;
+    display: inline-block;
+    margin: 0;
+  }
+
+  h2 {
+    @include SecondaryFont(18px, 400, 25px);
+    width: 320px;
+    height: 25px;
+    color: #fff;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+  }
+
+  h2::before {
+    content: "";
+    display: block;
+    width: 61px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    width: 61px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+
+  a {
+    margin: 20px auto;
+    padding: 14px 29px;
+    background-color: #ff7400;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    @include SecondaryFont(14px, 700, 19px);
+  }
+}

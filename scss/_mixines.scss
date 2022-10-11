@@ -1,0 +1,20 @@
+@mixin PrimaryFont ($fs, $fw, $lh,) {
+    font-family: 'Tinos', serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin SecondaryFont ($fs, $fw, $lh){
+    font-family: 'Open Sans' , sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin flexStyle( $jc, $ai, $fd) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}

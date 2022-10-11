@@ -1,0 +1,43 @@
+#middle{
+    height: 357px;
+    background-image: url(../../images/ourstory/reservation_bg.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.middle{
+    width: 1180px;
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    @include flexStyle( space-between, center, row);
+   
+    .text{
+        width: 601px;
+        height: 173px;
+        @include flexStyle( space-between, start, column);
+        h2{
+            @include PrimaryFont(52px, 400, 60px);
+            color: #D67E34;
+        }
+        p{
+            @include SecondaryFont(24px, 700, 24px);
+            color: #ffffff;
+        }
+
+        
+    }
+
+    a{
+        padding: 14px 19px;
+        background-color: #ff7400;
+        border: none;
+        text-decoration: none;
+        color: #fff;
+        @include SecondaryFont(14px, 700, 19px);
+    }
+
+   
+}
