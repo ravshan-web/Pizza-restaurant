@@ -113,3 +113,153 @@
     // Right side images styles end
   }    
 }
+
+
+
+
+// RWD 320px =============================
+
+@media only screen and (max-width : 320px){
+  .our-story {
+    max-width: 320px;
+    height: 1130px;
+    @include flexStyle(space-between, center, column);
+    margin: 0 auto;
+  
+    &__top {
+      width: 100%;
+      height: 1130px;
+      // background-color: bisque;
+      @include flexStyle(space-between, start, column);
+  
+      // Left side context styles start
+      &--desc {
+        width: 320px;
+        height: 800px;
+        padding: 10px;
+        display: grid;
+  
+        .description {
+          @include flexStyle(space-between, center, column);
+  
+          h2,
+          p {
+            margin: 0;
+            text-align: center;
+            
+          }
+  
+          h2 {
+            height: 92px;
+            width: 181px;
+            @include PrimaryFont(40px, 400, 46px);
+            margin: 0 auto;
+  
+            span {
+              color: #bc9060;
+            }
+          }
+  
+          p {
+            height: 341px;
+            color: #656363;
+            @include SecondaryFont(16px, 400, 22px);
+            margin: 0 auto;
+          }
+        }
+  
+        .statistics {
+          @include flexStyle(space-around, center, column);
+  
+          div {
+            text-align: center;
+            span {
+              color: #bc9060;
+              @include SecondaryFont(40px, 400, 54px);
+            }
+  
+            p {
+              color: black;
+              @include SecondaryFont(20px, 400, 27px);
+            }
+          }
+        }
+      }
+  
+      // Left side context styles end
+  
+      // Right side images styles start
+      &--img {
+        max-width: 300px;
+        height: 258px;
+        // background-color: rgb(255, 0, 0);
+  
+        .images-wrapper {
+          width: 300px;
+          height: 258px;
+          position: relative;
+          margin: 0;
+          padding: 0;
+  
+          .img-1 {
+            position: absolute;
+            width: 125px;
+            top: 33px;
+            left: 0px;
+            z-index: 5;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));        
+            
+            img{
+              width: 100%;
+            }
+          }
+  
+          .img-2 {
+            position: absolute;
+            width: 137px;
+            bottom: 0px;
+            right: 0;
+            z-index: 4;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            img{
+              width: 100%;
+            }
+          }
+  
+          .img-3 {
+            position: absolute;
+            width: 137px;
+            left: 80px;
+            top: 0;
+            z-index: 3;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            img{
+              width: 100%;
+            }
+          }
+  
+          .img-4 {
+            width: 137px;
+            height: 164px;
+            position: absolute;
+            top: 17px;
+            left: 153px;
+            z-index: 1;
+            background-color: #ffe8d0;
+
+            img{
+              width: 100%;
+            }
+            p{
+              opacity: 0;
+            }
+          }
+        }
+      }
+      // Right side images styles end
+    }    
+  }
+}
+

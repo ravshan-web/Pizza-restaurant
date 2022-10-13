@@ -108,3 +108,125 @@
         }
     }
 }
+
+
+
+
+
+
+// RWD 320px =====================================================
+
+@media only screen and (max-width:320px){
+
+    #our-menu{
+        height: 836px;
+        background-image: url(../../images/ourmenu/our-menu-bg.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .our-menu-context{
+        padding-top: 100px;
+        width: 100%;
+    
+        .title{
+            text-align: center;        
+    
+            h2{
+                @include PrimaryFont (54px, 400, 62px,);
+                color:#fff;
+            }
+        }
+    
+        .wrapper-card{
+            max-width: 900px;
+            height: 510px;
+            @include flexStyle(space-around, center, row);
+            margin-top: 75px;
+            text-align: center;
+    
+            .product-card{
+                width: 290px;
+                height: 510px;
+                // padding: 50px 30px 15px 30px;
+                margin: 0px 30px;
+                background-color: #fff;
+                text-align: center;            
+                @include flexStyle(space-around, center, column);
+                position: relative;
+            
+                .recommended{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width:  124px;
+                    height: 36px;
+                    background-color: #D67E34;
+                    @include flexStyle(center , center, row);
+    
+                    p{  
+                        @include SecondaryFont (13px, 400, 18px,);
+                        color:black;
+                    }
+                }
+             
+    
+                .card-img{
+                    width: 225px;    
+                    position: relative;   
+                    
+                    .price{
+                        position: absolute;
+                        width: 100px; height: 100px;
+                        border: 8px solid #fff;
+                        border-radius: 50%;
+                        background-color:  #D67E34;
+                        @include flexStyle(center , center, row);
+                        right: 0;
+                        bottom: 0;
+    
+                        p{
+                            color: #fff;
+                            font-weight: normal;
+                            font-family: 'Cookie';
+                            font-size: 30px;
+                            line-height: 33px;
+                        }
+                    }
+                    
+                    img{
+                        width: 100%;                    
+                    }
+                }
+    
+                .card-text{
+                    width: 226px;
+                    height: 160px;
+                    @include flexStyle(space-around, center, column);
+                    h3{
+                        @include PrimaryFont (26px, 400, 35px,);
+                        color:black;
+    
+                    }
+    
+                    p{
+                        @include SecondaryFont (16px, 400, 22px,);
+                        color:black;                    
+                    }
+    
+                    a{
+                      
+                        padding: 14px 67px;
+                        background-color: #D67E34;
+                        border: none;
+                        text-decoration: none;
+                        color: #fff;
+                        @include SecondaryFont(14px, 700, 19px);
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+        }
+    }
+}

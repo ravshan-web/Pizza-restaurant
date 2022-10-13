@@ -30,10 +30,13 @@
     @include flexStyle(space-between, center, column);
 
     .title {
-      @include PrimaryFont(26px, 400, 30px);
-      span {
-        color: #bc9060;
+      h3{
+        @include PrimaryFont(26px, 400, 30px);
+           span {
+           color: #bc9060;
+               }
       }
+      
     }
 
     p {
@@ -41,6 +44,70 @@
       text-align: center;
       color: #656363;
       margin-top: 20px;
+    }
+  }
+}
+
+
+
+
+
+// RWD 320px =========================
+
+@media only screen and (max-width:320px){
+  #hero {
+    width: 100%;
+    height: 855px;
+    position: relative;
+  }
+  
+  .wrapper {
+    max-width: 320px;
+    height: 855px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    bottom: 100px;
+  }
+  
+  .front-card {
+    width: 290px;
+    height: 276px;
+    padding: 10px 10px;
+    background-color: #fff;
+    @include flexStyle(start, center, column);
+    box-shadow: 10px 10px 40px 20px rgba(0, 0, 0, 0.1);
+  
+    .card-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0;
+      @include flexStyle(center, center, row);
+    }
+  
+    .card-desc {
+      margin: 0;
+      @include flexStyle(space-between, center, column);
+  
+      .title {
+        width: 270px; height: 50px;
+        h3{
+          @include PrimaryFont(22px, 400, 22px);
+        margin: 0;
+        span {
+          color: #bc9060;
+        }
+        }
+      }
+  
+      p {
+        @include PrimaryFont(22px, 400, 25px);
+        text-align: center;
+        color: #656363;
+        margin: 0;
+      }
     }
   }
 }

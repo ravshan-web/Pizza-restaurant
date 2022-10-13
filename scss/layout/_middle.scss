@@ -41,3 +41,61 @@
 
    
 }
+
+
+
+
+/// RWD 320px ========================
+
+@media only screen and (max-width:320px){
+    #middle{
+        margin-top: 100px;
+        max-width: 320px;
+        height: 357px;
+        background-image: url(../../images/ourstory/reservation_bg.png);
+        background-repeat: repeat-y;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+    }
+    
+    .middle{
+        max-width: 320px;
+        height: 300px;
+        margin: 0 auto;
+        position: absolute;
+        top:20px;
+        @include flexStyle( space-between, center, column);
+       
+        .text{
+            margin: 0 auto;
+            text-align: center;
+            width: 290px;
+            height: 150px;
+            @include flexStyle( space-between, start, column);
+            h2{
+                @include PrimaryFont(30px, 400, 34px);
+                margin: 0;
+                color: #D67E34;
+            }
+            p{
+                @include SecondaryFont(24px, 700, 33px);
+                color: #ffffff;
+                margin: 20px 0;
+            }
+    
+            
+        }
+    
+        a{
+            padding: 18px 19px;
+            background-color: #ff7400;
+            border: none;
+            text-decoration: none;
+            color: #fff;
+            @include SecondaryFont(14px, 700, 19px);
+        }
+    
+       
+    }
+}

@@ -9,7 +9,14 @@
     
 }
 
-// p , h1 {
-//     color: aliceblue;
-// }
+@media only screen and (max-width:320px){
+    .header{
+        width: 320px; height: 800px;
+        background-image: url(../../images/header/hero-image-res.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;       
+        padding-top: 20px;        
+    }
+}
 

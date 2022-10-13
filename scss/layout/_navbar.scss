@@ -3,11 +3,24 @@
   height: 64px;
   @include flexStyle(space-between, center, row);
 }
+
+.mobile-menu{
+  display: none;
+  a{
+      text-decoration: none;
+      .bx{
+        font-size: 30px;
+        color:#FF7400;
+      }
+  }
+}
 // NAVBAR MENU 4 ITEMS LINKS start
 .navbar {
   @include flexStyle(space-between, center, row);
   max-width: 892px;
   //   background-color: #9c6e48;
+
+  
 
   &__ul {
     @include flexStyle(space-between, center, row);
@@ -173,5 +186,230 @@
     text-decoration: none;
     color: #fff;
     @include SecondaryFont(14px, 700, 19px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// RWD 320px =================================================
+
+
+@media only screen and (max-width:320px){
+  .nav {
+    width: 100%;
+    height: 64px;
+    @include flexStyle(space-between, center, row);
+    padding: 0 17px;
+    padding-top: 20px;
+  }
+
+
+  .nav__logo{
+    width: 56px;
+  }
+
+  .logo-img{
+    width: 100%;
+  }
+  .mobile-menu{
+    display: block;
+    a{
+        text-decoration: none;
+        .bx , .bx-menu{
+          font-size: 30px;
+          color:#FF7400;
+        }
+    }
+  }
+
+  // Mobile menu 320px
+
+  
+
+  // NAVBAR MENU 4 ITEMS LINKS start
+  .navbar {
+    @include flexStyle(space-between, center, row);
+    max-width: 320px;
+    //   background-color: #9c6e48;
+
+    
+  
+    &__ul {
+      @include flexStyle(space-between, center, row);
+      width: 35%;
+      display: none;
+  
+      &--li {
+        list-style-type: none;
+        display: inline-block;
+        position: relative;
+        color: #ff7400;
+  
+        a {
+          text-decoration: none;
+          @include SecondaryFont(14px, 700, 19px);
+          color: white;
+          animation: Underline;
+        }
+      }
+  
+      li:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ff7400;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-in-out;
+      }
+  
+      li:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+  
+  // NAVBAR MENU 4 ITEMS LINKS end
+  
+  // NAVBAR ORDER PLACE start
+  .order__wrapper {
+    max-width: 30%;
+    @include flexStyle(space-between, center, row);
+    display: none;
+  
+    .cart-wrapper {
+      @include flexStyle(space-between, center, row);
+  
+      .cart-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  
+    .vertical-line {
+      width: 1px;
+      height: 52px;
+      background-color: #fff;
+      margin: 0 21px;
+    }
+  
+    .contact {
+      @include flexStyle(space-between, center, column);
+  
+      &__phone {
+        width: 160px;
+        @include SecondaryFont(18px, 700, 25px);
+        @include flexStyle(space-between, center, row);
+        color: white;
+        text-decoration: none;
+      }
+  
+      &__phone::before {
+        content: url(../../images/icon/phone.svg);
+      }
+  
+      &__text {
+        @include SecondaryFont(14px, 400, 19px);
+        color: #fff;
+      }
+    }
+  }
+  
+  // NAVBAR ORDER PLACE end
+  
+  // Order button start
+  
+  .order-button-wrapper {
+    display: none;
+    margin-left: 45px;
+    a {
+      padding: 14px 19px;
+      background-color: #ff7400;
+      border: none;
+      text-decoration: none;
+      color: #fff;
+      @include SecondaryFont(14px, 700, 19px);
+    }
+  }
+  
+  // Order button end
+  
+  //into title start
+  
+  .intro-title {
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 200px;
+    max-width: 280px;
+    height: 200px;
+    @include flexStyle(space-evenly, center, column);
+    text-align: center;
+    p {
+      @include PrimaryFont(30px, 400, 34px);
+      color: #d67e35;
+      margin: 0;
+    }
+  
+    h1 {
+      @include PrimaryFont(40px, 400, 46px);
+      color: #d67e35;
+      display: inline-block;
+      margin: 0;
+    }
+  
+    h2 {
+      @include SecondaryFont(15px, 400, 20px);
+      width: 141px;
+      height: 25px;
+      color: #fff;
+      margin: 0;
+      position: relative;
+      text-align: center;
+    }
+  
+    h2::before {
+      content: "";
+      display: block;
+      width: 61px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: none;
+    }
+  
+    h2::after {
+      content: "";
+      display: block;
+      width: 61px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      display: none;
+    }
+  
+    a {
+      margin: 20px auto;
+      padding: 14px 44px;
+      background-color: #ff7400;
+      border: none;
+      text-decoration: none;
+      color: #fff;
+      @include SecondaryFont(14px, 700, 19px);
+    }
   }
 }

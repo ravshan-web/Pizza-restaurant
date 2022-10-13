@@ -62,3 +62,84 @@
         }
     }
 }
+
+
+
+
+// RWD 320px =================
+
+@media only screen and (max-width:320px){
+    .our-foods{
+        max-width: 320px;
+        height: 1202px;
+        margin-top: 130px;
+        // background-color: rgb(0, 195, 189);
+    
+        .title{ 
+            width: 320px;
+            height: 92px;    
+            @include flexStyle( center, center, row);  
+            h2{
+                width: 176px;
+                @include PrimaryFont (40px, 400, 46px);  
+                span{
+                    color: #D67E34;
+                    text-align: center;
+                }  
+            }
+        }
+    
+        .context{
+            width: 100%;
+            // height: 474px;
+            @include flexStyle( space-between, center, column);
+            margin-top: 70px;
+    
+            .left{
+                max-width: px;  
+                img{
+                 height: 100%;   
+                }        
+            }
+    
+            .right{
+                max-width: 320px;
+                height: 474px;
+                @include flexStyle( space-between, center, column);
+                
+                .price-card{
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    width: 300px;
+                    height: 120px;
+                    @include flexStyle( space-between, center, row);
+                    
+                    .img{
+                        width: 130px;
+                        height: 113px;
+    
+                        img{
+                            width: 100%;
+                            height: 100%; 
+                        }
+                    }
+    
+    
+                    .desc{
+                        width: 60%;
+                        @include flexStyle( space-between, center, row);    
+                        p{
+                            @include PrimaryFont(20px, 400, 25px);
+                            text-align: center;
+
+                            span{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+           
+            }
+        }
+    }
+}

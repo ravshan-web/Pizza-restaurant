@@ -5,3 +5,15 @@ footer{
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
+//RWD 320px =====================
+
+@media only screen and (max-width:320px){
+    footer{
+        background-image: url(../../images/footer-responsive/Mask\ Group@2x.png);
+        height: 730px;
+        background-size:cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
